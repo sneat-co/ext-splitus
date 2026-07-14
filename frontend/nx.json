@@ -48,7 +48,10 @@
     ],
     "projectsRelationship": "fixed",
     "version": {
-      "preVersionCommand": "pnpm nx build ext-splitus-contract"
+      "conventionalCommits": true,
+      "fallbackCurrentVersionResolver": "disk",
+      "preVersionCommand": "pnpm exec nx run ext-splitus-contract:build",
+      "versionActions": "@nx/js/src/release/version-actions"
     },
     "releaseTagPattern": "v{version}",
     "changelog": {
